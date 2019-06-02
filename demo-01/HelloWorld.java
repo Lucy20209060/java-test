@@ -12,11 +12,29 @@ public class HelloWorld {
 
         if(true & true){
             System.out.println("&测试");
-        }
+        };
 
         if(false | true){
             System.out.println("|测试");
+        };
+
+        char e = '8';
+        System.out.println(e+1);
+
+        int[] arr = {1, 2, 3, 4};
+        System.out.println(arr[1]);
+
+        int[] arr2 = new int[10];
+        System.out.println(arr2[1]);
+
+        int[] intArray = {32, 56, 21, 97, 64, 23, 73};
+        int max = intArray[0];
+        for(int i = 0; i < intArray.length; i++){
+            if(intArray[i] > max){
+                max = intArray[i];
+            }
         }
+        System.out.println(max);
 
 
     }
