@@ -28,17 +28,42 @@ public class HelloWorld {
         System.out.println(arr2[1]);
 
         int[] intArray = {32, 56, 21, 97, 64, 23, 73};
-        int max = intArray[0];
-        for(int i = 0; i < intArray.length; i++){
-            if(intArray[i] > max){
-                max = intArray[i];
-            }
-        }
-        System.out.println(max);
+        // int max = intArray[0];
+        // for(int i = 0; i < intArray.length; i++){
+        //     if(intArray[i] > max){
+        //         max = intArray[i];
+        //     }
+        // }
+        // System.out.println(max);
+
+        // for(int n:intArray){
+        //     System.out.print(n + " ");
+        // }
+        // System.out.println();
 
         for(int n:intArray){
-            System.out.print(n + " ");
+            System.out.print(n+", ");
         }
+
+        System.out.println();
+
+        int temp;
+        for(int i = 0; i < intArray.length; i++){
+            System.out.print(intArray[i]+", ");
+            for(int j = 0; j < intArray.length - i - 1; j++){
+                if(intArray[j] > intArray[j+1]){
+                    temp = intArray[j+1];
+                    intArray[j+1] = intArray[j];
+                    intArray[j] = temp;
+                }
+            }
+        }
+
+        System.out.println();
+        for(int n:intArray){
+            System.out.print(n+"-");
+        }
+
 
 
     }
