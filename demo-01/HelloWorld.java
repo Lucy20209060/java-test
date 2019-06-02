@@ -10,6 +10,14 @@ public class HelloWorld {
         char d = (char)65536;
         System.out.println(d);
 
+        if(true & true){
+            System.out.println("&测试");
+        }
+
+        if(false | true){
+            System.out.println("|测试");
+        }
+
 
     }
 }
