@@ -1,5 +1,92 @@
 public class HelloWorld {
+    // 无参无返回值
+    public void testFn() {
+        System.out.println("Hello World");
+    }
+    // 无参有返回值
+    public int area() {
+        int length = 10;
+        int width = 5;
+        int s = length * width;
+        return s;
+    }
+    // 有参无返回值
+    public void max(float a, float b){
+        float temp =  a > b ? a : b ;
+        System.out.println("最大值：" + temp);
+    }
+
+    // 有参有返回值
+    public int area_r(int length, int width) {
+        return length * width;
+    }
+
+    // 数组作为参数
+    public void printArray(int[] arr){
+        System.out.println("数组长度：" + arr.length);
+    }
+
+    // 查找数组元素
+    public int seachArrayElement(int n, int[] arr){
+        return arr[n];
+    }
+
+    // 方法重载
+    public int plus(int m, int n){
+        return m+n;
+    }
+    public double plus(double m, double n){
+        return m+n;
+    }
+    public int plus(int[] arr){
+        int num = 0;
+        for(int i = 0; i < arr.length; i++){
+            num = num + arr[i];
+        }
+        return num;
+    }
+
+    // 可变参数
+    public void sum(int ...n){
+        int sum = 0;
+        for(int i:n){
+            sum = sum + i;
+        }
+        System.out.println("sum: "+sum);
+    }
+
     public static void main(String []args) {
+        // 创建HelloWorld类的hw对象
+        HelloWorld hw = new HelloWorld();
+        // 使用对象名.方法名() 调用方法
+        hw.testFn();
+
+        hw.sum(1);
+        hw.sum(1, 2);
+        hw.sum(1,2 ,3);
+
+        int plus1 = hw.plus(1, 2);
+        double plus2 = hw.plus(1.2, 2.3);
+        int[] arr10 = {1, 2, 3};
+        int plus3 = hw.plus(arr10);
+
+        System.out.println(plus1 + " " + plus2 + " " + plus3);
+
+        int s = hw.area();
+        System.out.println(s);
+
+        float f1 = 2.3f, f2 = 2f;
+        hw.max(f1, f2);
+
+        s = hw.area_r(3, 4);
+        System.out.println(s);
+
+        int[] array = {1, 2, 3, 4, 5};
+        hw.printArray(array);
+
+
+
+
         // System.out.println("Hello World"); // 打印 Hello World
         char a = 'A';
         System.out.println(a);
@@ -63,9 +150,7 @@ public class HelloWorld {
         for(int n:intArray){
             System.out.print(n+"-");
         }
-
-
-
+        
     }
 }
 
