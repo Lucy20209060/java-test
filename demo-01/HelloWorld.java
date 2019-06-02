@@ -36,6 +36,10 @@ public class HelloWorld {
         }
         System.out.println(max);
 
+        for(int n:intArray){
+            System.out.print(n + " ");
+        }
+
 
     }
 }
