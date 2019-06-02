@@ -1,6 +1,16 @@
 public class HelloWorld {
     public static void main(String []args) {
-        System.out.println("Hello World"); // 打印 Hello World
+        // System.out.println("Hello World"); // 打印 Hello World
+        char a = 'A';
+        System.out.println(a);
+        char b = 65;
+        System.out.println(b);
+        char c = 65535;
+        System.out.println(c);
+        char d = (char)65536;
+        System.out.println(d);
+
+
     }
 }
 
