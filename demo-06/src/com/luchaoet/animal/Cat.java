@@ -13,4 +13,13 @@ public class Cat extends Animal{
     public double getWeight(){
         return weight;
     }
+
+//    父类的静态方法不能被重写
+    public void back(){
+
+    }
+
+    public void dispaly(){
+
+    }
 }

@@ -34,6 +34,14 @@ public class Animal {
         System.out.println("吃东西");
     }
 
+    private static void back() {
+
+    }
+
+    private final void dispaly(){
+
+    }
+
 
 
 }
